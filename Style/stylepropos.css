@@ -1,0 +1,145 @@
+.H1_apropos {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 11px;
+}
+
+.Box_texte {
+    background-color: rgba(255, 255, 255, 0.158);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    width: 360px;
+
+}
+
+#Box_Milieu_propos{
+    height: 440px;
+    width: 800px;
+    background: rgba(59, 57, 57, 0.712);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 2.5px solid rgba(255, 255, 255, 0.089);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+#Zone_Photo {
+    height: fit-content;
+}
+
+#Photo {
+    width: 20%;
+    border-radius: 16px;
+    box-shadow: 8px 8px 24px;
+}
+
+#Haut {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#Btn_cv {
+    font-family: "Quicksand", sans-serif;
+    background-color: #ffffff8e;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 13px 25px;
+    text-decoration: none;
+}
+
+#Btn_cv:hover {
+    background-color: #ffffffab;
+}
+
+#Btn_cv:active {
+    position: relative;
+    top: 1px;
+}
+
+#Bas {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#separateur {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+#Box_Competences {
+    display: flex;
+    align-items: baseline;
+}
+
+li {
+    font-family: "Quicksand", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#Box_Competences {
+    display: flex;
+    flex-direction: column;
+}
+
+#Box_Competenceszone {
+    display: flex;
+    justify-content: center;
+}
+
+#SavoirEtre {
+    margin-bottom: 24px;
+}
+
+.Icone_Passion {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.Zone_Passion {
+    display: flex;
+    flex-direction: row;
+}
+
+.IMG_Outils {
+    width: 42px;
+    transition: transform 0.3s ease;
+}
+
+.IMG_Outils:hover {
+    transform: scale(1.2);
+}
+
+#IMG_Logiciels {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}

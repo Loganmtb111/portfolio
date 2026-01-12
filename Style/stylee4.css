@@ -1,0 +1,153 @@
+/* Style spécifique pour la page Épreuve E4 */
+
+#Container_E4 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#Scene_E4 {
+    display: flex;
+    width: 95%;
+    gap: 20px;
+}
+
+#Content_E4 {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 30px;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.tableau-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tableau-header h1 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 5px;
+    text-shadow: none;
+}
+
+.tableau-header h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    text-shadow: none;
+}
+
+.info-candidat {
+    border: 2px solid #000;
+    margin-bottom: 10px;
+}
+
+.info-row {
+    display: flex;
+    border-bottom: 1px solid #000;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    flex: 2;
+    padding: 8px;
+    border-right: 1px solid #000;
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;
+}
+
+.info-value {
+    flex: 3;
+    padding: 8px;
+    font-size: 12px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-choice {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.tableau-competences {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.tableau-competences th,
+.tableau-competences td {
+    border: 1px solid #000;
+    padding: 6px;
+    text-align: center;
+    color: #000;
+}
+
+.tableau-competences th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    font-size: 9px;
+}
+
+.competence-header {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 8px;
+    padding: 4px;
+    min-width: 30px;
+}
+
+.realisation-cell {
+    text-align: left;
+    font-weight: 600;
+}
+
+.date-cell {
+    font-size: 9px;
+}
+
+.section-title {
+    background-color: #d0d0d0 !important;
+    font-weight: 700;
+    text-align: center;
+    font-size: 11px;
+}
+
+.mark-cell {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Ajustement de la scrollbar pour le contenu E4 */
+#Content_E4::-webkit-scrollbar {
+    width: 8px;
+}
+
+#Content_E4::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+#Content_E4::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#Content_E4::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

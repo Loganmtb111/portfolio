@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(image/background.jpeg);
+    background-size: 96%;
+    background-position: center;
+    overflow: hidden;
+    transition: background-position 0.1s ease-out, background-size 0.1s ease-out;
+}
+
+H1 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+H2 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+H3 {
+    font-family: "Quicksand", sans-serif;
+}
+
+#background_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+a.Menu_Principal,
+p {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+a.Menu_Bas {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#Container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1500px;
+
+}
+
+#Scene {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+}
+
+#Scene_Milieu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#Milieu_Gauche {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 24px;
+    align-items: center;
+}
+
+#Logan_apropos {
+    display: flex;
+    align-items: center;
+}
+
+#Milieu_Droite {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 24px;
+}
+
+#Box_Gauche {
+    height: 240px;
+    width: 160px;
+    padding: 16px;
+    margin-right: 40px;
+    background: rgba(59, 57, 57, 0.712);
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    border: 2.5px solid rgba(255, 255, 255, 0.089);
+    transform: perspective(400px) rotatey(15deg);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+
+
+#Menu_Bas {
+    display: flex;
+    gap: 44px;
+}
+
+img {
+    margin-right: 12px;
+}
+
+.Text_Menu_Principal {
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-out;
+    border-radius: 5px;
+}
+
+.Text_Menu_Bas {
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease-out;
+    border-radius: 5px;
+}
+
+.Text_Menu_Principal:hover {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.281);
+
+}
+
+.Text_Menu_Bas:hover {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.281);
+
+}
+
+#Box_Milieu {
+    height: 440px;
+    width: 800px;
+    background: rgba(59, 57, 57, 0.712);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 2.5px solid rgba(255, 255, 255, 0.089);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+
+.Bouton {
+    color: black;
+    text-decoration: none;
+}
+
+#Texte_Logan {
+    font-size: 10px;
+}
+
+#Titre_Logan {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#Photo_logan {
+    height: 96px;
+    border-radius: 80px;
+}
+
+#Savoir_plus {
+    width: 80px;
+    height: 32px;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 40px;
+    border: none;
+    font-size: 10px;
+    background-color: white;
+}
+
+
+.Carte {
+    display: flex;
+    flex-direction: column;
+    border-radius: 11px;
+    width: 280px;
+    height: 160px;
+    overflow: hidden;
+    box-shadow: 7px 7px 20px rgb(0, 0, 0);
+    transition: 0.3s ease-in-out;
+}
+
+.Carte:hover {
+    box-shadow: 7px 7px 20px rgba(124, 119, 119, 0.205);
+}
+
+
+.Carte_body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Body_parcours {
+    background: rgba(255, 0, 255, 0.5) url(image/img_carteparcours.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border: 0px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+#Body_parcours:hover {
+    border: 1.5mm ridge rgba(255, 0, 255, 0.5);
+}
+
+
+
+#Body_veilles {
+    background: rgba(33, 185, 255, 0.5) url(image/img_carteveille.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border: 0px solid transparent;
+    transition: 0.2s;
+}
+
+#Body_veilles:hover {
+    border: 1.5mm ridge rgba(33, 185, 255, 0.5);
+}
+
+#Body_projet {
+    background: rgba(255, 0, 0, 0.6) url(image/img_carteparcours.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border: 0px solid transparent;
+    transition: 0.2s;
+}
+
+#Body_projet:hover {
+    border: 1.5mm ridge rgba(255, 0, 0, 0.6);
+}
+
+.Carte_title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 3px 2px rgba(0, 0, 0);
+}
+
+
+#Box_Droite {
+    height: 480px;
+    width: 320px;
+    background: rgba(59, 57, 57, 0.712);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 2.5px solid rgba(255, 255, 255, 0.089);
+    transform: perspective(500px) rotatey(-15deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+#Box_Droite h1 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+#Box_Droite p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#Box_Basse {
+    height: 48px;
+    width: 512px;
+    background: rgba(59, 57, 57, 0.712);
+    border-radius: 32px;
+    backdrop-filter: blur(2px);
+    border: 2.5px solid rgba(255, 255, 255, 0.089);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+}
+
+.page-overlay .overlay-top,
+.page-overlay .overlay-bottom {
+    width: 100%;
+    height: 50%;
+    background: rgba(0, 0, 0, 1);
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+.page-overlay.hidden .overlay-top {
+    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 0);
+}
+
+.page-overlay.hidden .overlay-bottom {
+    transform: translateY(100%);
+    background: rgba(0, 0, 0, 0);
+}
+
+
+.page-overlay.hidden {
+    pointer-events: none;
+}
+
+
+.transition-active .overlay-top,
+.transition-active .overlay-bottom {
+    background: rgba(0, 0, 0, 1);
+}
+
+
+/* Largeur de la scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* vertical */
+    height: 10px;
+    /* horizontal */
+}
+
+/* Fond de la scrollbar */
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    /* couleur du rail */
+    border-radius: 10px;
+}
+
+/* Barre qui défile */
+::-webkit-scrollbar-thumb {
+    background: #5c525c;
+    /* couleur principale */
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
+    /* effet creusé */
+}
+
+/* Hover sur la barre */
+::-webkit-scrollbar-thumb:hover {
+    background: #494149;
+}
