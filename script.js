@@ -12,10 +12,25 @@ document.addEventListener("DOMContentLoaded", function () {
         overlay.classList.add("hidden");
     }, 300);
 
-    document.querySelectorAll("a").forEach(link => {
+    document.querySelectorAll("a[data-copy]").forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
+            e.stopPropagation();
+            const value = this.dataset.copy;
+            navigator.clipboard.writeText(value).then(() => {
+                const original = this.dataset.tooltip;
+                this.dataset.tooltip = "Copié !";
+                setTimeout(() => { this.dataset.tooltip = original; }, 1500);
+            });
+        });
+    });
+
+    document.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (this.dataset.copy) return;
+            e.preventDefault();
             let href = this.href;
+            if (!href || href.endsWith("#")) return;
             overlay.classList.remove("hidden");
 
             setTimeout(() => {

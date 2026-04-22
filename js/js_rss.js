@@ -11,6 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const actusContainer = document.getElementById("Actus_Container");
     const rssInfo = document.getElementById("RSS_Info");
 
+    // Mots-clés à filtrer (contenu adulte)
+    const bannedKeywords = ["porno", "porn", "18+", "adulte", "xxx", "nsfw", "sexy", "hot", "sex"];
+
+    // Extraire une image depuis le contenu HTML
+    function extractImageFromHTML(html) {
+        if (!html) return "";
+        const match = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+        return match ? match[1] : "";
+    }
+
     // Fonction pour récupérer et afficher les flux RSS
     async function fetchRSS() {
         console.log("Tentative de chargement des flux RSS...");
@@ -44,41 +54,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 throw new Error("Aucun article trouvé dans les flux RSS");
             }
 
-            // Mots-clés à filtrer (contenu adulte)
-            const bannedKeywords = ["porno", "porn", "18+", "adulte", "xxx", "nsfw", "sexy", "hot", "sex"];
-
-            // Filtrer pour ne garder QUE les articles avec images ET sans contenu adulte
-            const itemsWithImages = allItems.filter(item => {
-                const thumbnail = item.thumbnail || item.enclosure?.link || "";
+            // Filtrer le contenu adulte uniquement
+            const filteredItems = allItems.filter(item => {
                 const title = (item.title || "").toLowerCase();
-
-                // Vérifier si le titre contient des mots-clés interdits
                 const containsBannedWord = bannedKeywords.some(keyword => title.includes(keyword));
-
-                return thumbnail !== "" && !containsBannedWord;
+                return !containsBannedWord;
             });
 
-            console.log("Nombre d'articles avec images:", itemsWithImages.length);
+            console.log("Nombre d'articles après filtrage:", filteredItems.length);
 
-            if (itemsWithImages.length === 0) {
-                throw new Error("Aucun article avec image trouvé");
+            if (filteredItems.length === 0) {
+                throw new Error("Aucun article trouvé après filtrage");
             }
 
             // Trier par date (plus récent en premier)
-            itemsWithImages.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+            filteredItems.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
             // Vider le conteneur
             actusContainer.innerHTML = "";
 
-            // Afficher les 4 premiers articles avec images
-            const maxItems = Math.min(itemsWithImages.length, 4);
+            // Afficher les 4 premiers articles
+            const maxItems = Math.min(filteredItems.length, 4);
 
             for (let i = 0; i < maxItems; i++) {
-                const item = itemsWithImages[i];
+                const item = filteredItems[i];
                 const title = item.title || "Titre non disponible";
                 const link = item.link || "#";
                 const pubDate = item.pubDate || "";
-                const thumbnail = item.thumbnail || item.enclosure?.link || "";
+
+                // Chercher une image : thumbnail, enclosure, ou dans le contenu HTML
+                const thumbnail = item.thumbnail
+                    || item.enclosure?.link
+                    || extractImageFromHTML(item.content)
+                    || extractImageFromHTML(item.description)
+                    || "";
 
                 // Formater la date
                 let formattedDate = "Date inconnue";
@@ -91,12 +100,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 }
 
-                // Créer l'élément HTML (on sait que thumbnail existe)
+                // Créer l'élément HTML
                 const actuItem = document.createElement("div");
                 actuItem.className = "Actu_Item";
+
+                // Afficher avec ou sans image
+                const imageHTML = thumbnail
+                    ? `<img src="${thumbnail}" alt="${title}" class="Actu_Image">`
+                    : `<div class="Actu_Image_Placeholder"><span>VR</span></div>`;
+
                 actuItem.innerHTML = `
                     <a href="${link}" target="_blank" rel="noopener noreferrer" class="Actu_Link">
-                        <img src="${thumbnail}" alt="${title}" class="Actu_Image">
+                        ${imageHTML}
                         <div class="Actu_Content">
                             <p class="Actu_Title">${title}</p>
                             <p class="Actu_Date">${formattedDate}</p>

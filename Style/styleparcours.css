@@ -17,12 +17,11 @@
     border-radius: 16px;
     background: #85dcff;
     background: linear-gradient(180deg, rgba(133, 220, 255, 1) 59%, rgb(22, 167, 48) 59%);
-    overflow-x: auto; /* active le scroll horizontal */
-    overflow-y: hidden; /* empêche le scroll vertical */
-    white-space: nowrap; /* pour aligner les éléments */
-
-
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
+
 
 #Box_Haut {
     display: flex;
@@ -49,79 +48,157 @@
 
 #Zone_IMG_Villages {
     display: flex;
+    gap: 160px;
+    padding-left: 320px;
     margin-bottom: 40px;
+    align-items: flex-start;
 }
 
-#IMG_Village1 {
+.Village_Group {
     position: relative;
-    top: 64px;
-    left: 320px
+    top: 80px;
+    flex-shrink: 0;
 }
 
-#IMG_Village2 {
-    position: relative;
-    top: 64px;
-    left: 480px;
-}
-
-#IMG_Village3 {
-    position: relative;
-    top: 64px;
-    left: 640px;
-}
-
+#IMG_Village1,
+#IMG_Village2,
+#IMG_Village3,
 #IMG_Village4 {
-    position: relative;
-    top: 64px;
-    left: 800px;
+    display: block;
 }
 
-#IMG_panneaux1 {
-    position: relative;
-    width: 148px;
-    top: 116px;
-    left: -360px;
-    transition: transform 0.3s ease;
+.Panneau_Wrapper {
+    position: absolute;
+    bottom: -44px;
+    left: -108px;
 }
 
-#IMG_panneaux2 {
-    position: relative;
-    width: 148px;
-    top: 116px;
-    left: -200px;
-    transition: transform 0.3s ease;
+#Wrapper_panneaux1,
+#Wrapper_panneaux2,
+#Wrapper_panneaux3,
+#Wrapper_panneaux4 {
+    position: absolute;
 }
 
-#IMG_panneaux3 {
-    position: relative;
-    width: 148px;
-    top: 116px;
-    left: -40px;
-    transition: transform 0.3s ease;
-}
-
+#IMG_panneaux1,
+#IMG_panneaux2,
+#IMG_panneaux3,
 #IMG_panneaux4 {
-    position: relative;
-    width: 148px;
-    top: 116px;
-    left: 120px;
+    width: 185px;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-#IMG_panneaux1:hover {
+.Panneau_Wrapper:hover img {
     transform: scaleX(1.05) translateY(-5px);
 }
 
-#IMG_panneaux2:hover {
-    transform: scaleX(1.05) translateY(-5px);
+.Panneau_Tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: rgba(15, 15, 15, 0.92);
+    border: 1.5px solid rgba(253, 224, 71, 0.55);
+    border-radius: 10px;
+    padding: 10px 14px;
+    width: 230px;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    white-space: normal;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-#IMG_panneaux3:hover {
-    transform: scaleX(1.05) translateY(-5px);
+.Panneau_Wrapper:hover .Panneau_Tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
-#IMG_panneaux4:hover {
-    transform: scaleX(1.05) translateY(-5px);
+.Tooltip_Titre {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(253, 224, 71, 0.95);
+    margin: 0 0 2px 0;
+}
+
+.Tooltip_Lieu {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 1px 0;
+}
+
+.Tooltip_Date {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    margin: 0 0 4px 0;
+}
+
+.Tooltip_Exp {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 4px 0 1px 0;
+    font-weight: 600;
+}
+
+.Tooltip_Separateur {
+    border: none;
+    border-top: 1px solid rgba(253, 224, 71, 0.25);
+    margin: 6px 0;
+}
+
+#Nav_Parcours {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.Nav_Arrow {
+    background: rgba(59, 57, 57, 0.712);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-family: "Quicksand", sans-serif;
+}
+
+.Nav_Arrow:hover {
+    background: rgba(253, 224, 71, 0.25);
+    border-color: rgba(253, 224, 71, 0.7);
+}
+
+#Nav_Dots {
+    display: flex;
+    gap: 10px;
+}
+
+.Nav_Dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.Nav_Dot.active {
+    background: rgba(253, 224, 71, 0.9);
+    transform: scale(1.35);
+}
+
+.Nav_Dot:not(.active):hover {
+    background: rgba(255, 255, 255, 0.6);
 }
 
 #Zone_Route {
@@ -139,11 +216,13 @@
 #IMG_Voiture {
     position: fixed;
     width: 192px;
-    top: 216px;
+    top: 240px;
 }
 
 #Zone_Buisson {
     display: flex;
+    position: relative;
+    top: -16px;
 }
 
 #IMG_Buissons1 {

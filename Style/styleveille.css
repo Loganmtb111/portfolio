@@ -282,6 +282,23 @@
     margin-top: 8px;
 }
 
+.Actu_Image_Placeholder {
+    width: 64px;
+    height: 48px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    background: rgba(33, 185, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Actu_Image_Placeholder span {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(33, 185, 255, 1);
+}
+
 
 li{
     color: white ;
