@@ -52,8 +52,7 @@
                                 en développement, mais surtout pour découvrir le monde de la cybersécurité ! </p>
                         </div>
                         <div id="CV">
-                            <a href="https://www.canva.com/design/DAFuzYBJlB4/T0G24JxWAgOdN48aHGaH2w/edit" id="Btn_cv"
-                                target="_blank" rel="noopener noreferrer">Voir mon CV</a>
+                            <button id="Btn_cv" onclick="ouvrirCV()">Voir mon CV</button>
                         </div>
                     </div>
                     <div id="Bas">
@@ -94,7 +93,7 @@
                 <div id="Box_Basse">
                     <div id="Menu_Bas">
                         <div class="Text_Menu_Bas"><a class="Menu_Bas"
-                                href="https://www.linkedin.com/in/logan-ricoult-aubineau">LinkedIn</a></div>
+                                href="https://www.linkedin.com/in/logan-ricoult-aubineau" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
                         <div class="Text_Menu_Bas"><a class="Menu_Bas" href="#" data-tooltip="loganricoult@gmail.com" data-copy="loganricoult@gmail.com">Mail</a></div>
                         <div class="Text_Menu_Bas"><a class="Menu_Bas" href="#" data-tooltip="06.72.59.41.55" data-copy="06.72.59.41.55">Téléphone</a></div>
                     </div>
@@ -133,7 +132,29 @@
 
     </div>
 
+    <!-- Modal CV -->
+    <div id="Modal_CV" class="CV_Overlay">
+        <div class="CV_Contenu">
+            <button class="CV_Fermer" onclick="fermerCV()">✕</button>
+            <iframe src="../document_projet/CV_Ricoult_Logan.pdf" class="CV_iframe" type="application/pdf"></iframe>
+        </div>
+    </div>
+
     <script src="../script.js"></script>
+    <script>
+        function ouvrirCV() {
+            document.getElementById("Modal_CV").classList.add("active");
+        }
+        function fermerCV() {
+            document.getElementById("Modal_CV").classList.remove("active");
+        }
+        document.getElementById("Modal_CV").addEventListener("click", function (e) {
+            if (e.target === this) fermerCV();
+        });
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") fermerCV();
+        });
+    </script>
 </body>
 
 </html>

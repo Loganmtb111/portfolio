@@ -1,36 +1,37 @@
 
 
 #Box_Milieu_Veille {
-    height: 440px;
-    width: 800px;
+    height: 484px;
+    width: 880px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(5px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    padding: 22px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
 #Box_Droite_veille {
-    height: 560px;
-    width: 320px;
+    height: 616px;
+    width: 420px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(5px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    transform: perspective(500px) rotatey(-15deg);
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    transform: perspective(550px) rotatey(-15deg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 40px;
+    justify-content: flex-start;
+    padding: 33px 44px;
+    overflow-y: auto;
 }
 
 #Tabs_Container {
     display: flex;
     gap: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 8px;
 }
@@ -39,11 +40,11 @@
     background: rgba(255, 255, 255, 0.1);
     color: white;
     border: none;
-    padding: 10px 19px;
+    padding: 11px 20px;
     border-radius: 8px 8px 0 0;
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 17px;
     cursor: pointer;
     transition: all 0.3s ease;
     flex: 1;
@@ -88,7 +89,7 @@
 
 
 .Content_Section {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 }
 
 .Content_Section p {
@@ -100,15 +101,15 @@
 .Encadre_Retenir {
     background: rgba(33, 185, 255, 0.2);
     border-left: 4px solid rgba(33, 185, 255, 1);
-    padding: 12px;
+    padding: 13px;
     border-radius: 6px;
-    margin: 16px 0;
+    margin: 17px 0;
 }
 
 .Encadre_Retenir h3 {
     margin-top: 0;
     color: rgba(33, 185, 255, 1);
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .Encadre_Retenir p {
@@ -119,21 +120,21 @@
 .Blocs_Container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 16px;
+    gap: 13px;
+    margin-top: 17px;
 }
 
 .Bloc_Apport {
     background: rgba(255, 255, 255, 0.1);
-    padding: 16px;
-    border-radius: 10px;
+    padding: 17px;
+    border-radius: 11px;
     border: 2px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
 }
 
 .Bloc_Apport:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -156,7 +157,7 @@
 
 .Bloc_Apport h3 {
     margin-top: 0;
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 8px;
     color: white;
 }
@@ -166,22 +167,22 @@
 }
 
 .Exemple {
-    font-size: 11px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.7);
     font-style: italic;
 }
 
 
 #Timeline {
-    margin-top: 16px;
+    margin-top: 17px;
     position: relative;
     display: flex;
         justify-content: space-between;
 }
 
 .Timeline_Item {
-    margin-bottom: 24px;
-    padding-left: 24px;
+    margin-bottom: 26px;
+    padding-left: 26px;
     border-left: 3px solid rgba(33, 185, 255, 0.5);
     position: relative;
 }
@@ -191,8 +192,8 @@
     position: absolute;
     left: -6px;
     top: 0;
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
     background: rgba(33, 185, 255, 1);
     border-radius: 50%;
     border: 3px solid rgba(59, 57, 57, 0.712);
@@ -200,7 +201,7 @@
 
 .Timeline_Date {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     color: rgba(33, 185, 255, 1);
     margin-bottom: 8px;
 }
@@ -211,21 +212,21 @@
 
 
 #Box_Droite h2 {
-    font-size: 16px;
-    margin-bottom: 16px;
+    font-size: 20px;
+    margin-bottom: 17px;
     text-align: center;
 }
 
 #Actus_Container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 13px;
+    margin-bottom: 17px;
 }
 
 .Actu_Item {
     background: rgba(255, 255, 255, 0.1);
-    padding: 12px;
+    padding: 13px;
     border-radius: 8px;
     border-left: 3px solid rgba(33, 185, 255, 0.5);
     transition: all 0.3s ease;
@@ -240,7 +241,7 @@
     text-decoration: none;
     color: inherit;
     display: flex;
-    gap: 10px;
+    gap: 11px;
     align-items: flex-start;
 }
 
@@ -249,8 +250,8 @@
 }
 
 .Actu_Image {
-    width: 64px;
-    height: 48px;
+    width: 70px;
+    height: 52px;
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
@@ -265,26 +266,26 @@
 .Actu_Title {
     font-weight: 600;
     margin-bottom: 4px;
-    font-size: 11px;
+    font-size: 15px;
 }
 
 .Actu_Date {
-    font-size: 10px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     margin: 0;
 }
 
 #RSS_Info {
     text-align: center;
-    font-size: 10px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
     font-style: italic;
     margin-top: 8px;
 }
 
 .Actu_Image_Placeholder {
-    width: 64px;
-    height: 48px;
+    width: 70px;
+    height: 52px;
     border-radius: 6px;
     flex-shrink: 0;
     background: rgba(33, 185, 255, 0.3);
@@ -295,7 +296,7 @@
 
 .Actu_Image_Placeholder span {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     color: rgba(33, 185, 255, 1);
 }
 

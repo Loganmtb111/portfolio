@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", function (e) {
             if (this.dataset.copy) return;
+            if (this.target === "_blank") return;
             e.preventDefault();
             let href = this.href;
             if (!href || href.endsWith("#")) return;

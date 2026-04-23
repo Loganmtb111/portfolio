@@ -50,7 +50,7 @@ p {
     color: white;
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
+    font-size: 16px;
 }
 
 a.Menu_Bas {
@@ -58,7 +58,7 @@ a.Menu_Bas {
     font-weight: 400;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -69,7 +69,7 @@ a.Menu_Bas {
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 1500px;
+    perspective: 1650px;
 
 }
 
@@ -85,14 +85,14 @@ a.Menu_Bas {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 17px;
 }
 
 #Milieu_Gauche {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 24px;
+    margin: 26px;
     align-items: center;
 }
 
@@ -105,19 +105,19 @@ a.Menu_Bas {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 24px;
+    margin: 26px;
 }
 
 #Box_Gauche {
-    height: 240px;
-    width: 160px;
-    padding: 16px;
-    margin-right: 40px;
+    height: 264px;
+    width: 176px;
+    padding: 17px;
+    margin-right: 44px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(2px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    transform: perspective(400px) rotatey(15deg);
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    transform: perspective(440px) rotatey(15deg);
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -129,11 +129,11 @@ a.Menu_Bas {
 
 #Menu_Bas {
     display: flex;
-    gap: 44px;
+    gap: 48px;
 }
 
 img {
-    margin-right: 12px;
+    margin-right: 13px;
 }
 
 .Text_Menu_Principal {
@@ -174,12 +174,12 @@ a.Menu_Bas[data-tooltip]::after {
     left: 50%;
     transform: translateX(-50%) translateY(4px);
     background: rgba(20, 20, 20, 0.92);
-    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 8px;
-    padding: 6px 12px;
+    padding: 6px 13px;
     white-space: nowrap;
     font-family: "Quicksand", sans-serif;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 500;
     color: white;
     opacity: 0;
@@ -194,13 +194,13 @@ a.Menu_Bas[data-tooltip]:hover::after {
 }
 
 #Box_Milieu {
-    height: 440px;
-    width: 800px;
+    height: 484px;
+    width: 880px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(5px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    padding: 22px;
     display: flex;
     justify-content: space-around;
     overflow-y: auto;
@@ -212,27 +212,27 @@ a.Menu_Bas[data-tooltip]:hover::after {
 }
 
 #Texte_Logan {
-    font-size: 10px;
+    font-size: 14px;
 }
 
 #Titre_Logan {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 800;
 }
 
 #Photo_logan {
-    height: 96px;
-    border-radius: 80px;
+    height: 105px;
+    border-radius: 88px;
 }
 
 #Savoir_plus {
-    width: 80px;
-    height: 32px;
+    width: 88px;
+    height: 35px;
     color: #000000;
     font-weight: bold;
-    border-radius: 40px;
+    border-radius: 44px;
     border: none;
-    font-size: 10px;
+    font-size: 14px;
     background-color: white;
 }
 
@@ -240,16 +240,16 @@ a.Menu_Bas[data-tooltip]:hover::after {
 .Carte {
     display: flex;
     flex-direction: column;
-    border-radius: 11px;
-    width: 280px;
-    height: 160px;
+    border-radius: 12px;
+    width: 308px;
+    height: 176px;
     overflow: hidden;
-    box-shadow: 7px 7px 20px rgb(0, 0, 0);
+    box-shadow: 7px 7px 22px rgb(0, 0, 0);
     transition: 0.3s ease-in-out;
 }
 
 .Carte:hover {
-    box-shadow: 7px 7px 20px rgba(124, 119, 119, 0.205);
+    box-shadow: 7px 7px 22px rgba(124, 119, 119, 0.205);
 }
 
 
@@ -304,43 +304,45 @@ a.Menu_Bas[data-tooltip]:hover::after {
 .Carte_title {
     color: #ffffff;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 5px 3px 2px rgba(0, 0, 0);
 }
 
 
 #Box_Droite {
-    height: 480px;
-    width: 320px;
+    height: 528px;
+    width: 352px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(5px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    transform: perspective(500px) rotatey(-15deg);
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    transform: perspective(550px) rotatey(-15deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    padding: 44px;
+    overflow: hidden;
 }
 
+
 #Box_Droite h1 {
-    font-size: 25px;
-    margin-bottom: 12px;
+    font-size: 27px;
+    margin-bottom: 13px;
 }
 
 #Box_Droite p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.4;
 }
 
 #Box_Basse {
-    height: 48px;
-    width: 512px;
+    height: 52px;
+    width: 563px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 32px;
+    border-radius: 35px;
     backdrop-filter: blur(2px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
+    border: 2px solid rgba(255, 255, 255, 0.089);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -392,9 +394,9 @@ a.Menu_Bas[data-tooltip]:hover::after {
 
 /* Largeur de la scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 11px;
     /* vertical */
-    height: 10px;
+    height: 11px;
     /* horizontal */
 }
 
@@ -402,14 +404,14 @@ a.Menu_Bas[data-tooltip]:hover::after {
 ::-webkit-scrollbar-track {
     background: #1e1e1e;
     /* couleur du rail */
-    border-radius: 10px;
+    border-radius: 11px;
 }
 
 /* Barre qui défile */
 ::-webkit-scrollbar-thumb {
     background: #5c525c;
     /* couleur principale */
-    border-radius: 10px;
+    border-radius: 11px;
     border: 2px solid #1e1e1e;
     /* effet creusé */
 }

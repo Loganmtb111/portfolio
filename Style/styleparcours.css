@@ -1,20 +1,20 @@
 #Box_Milieu_parcours {
-    height: 440px;
-    width: 960px;
-    margin: 24px;
+    height: 484px;
+    width: 1056px;
+    margin: 26px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(5px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    padding: 22px;
     display: flex;
     align-items: center;
 }
 
 #Interface_parcours {
-    width: 920px;
-    height: 400px;
-    border-radius: 16px;
+    width: 1012px;
+    height: 440px;
+    border-radius: 17px;
     background: #85dcff;
     background: linear-gradient(180deg, rgba(133, 220, 255, 1) 59%, rgb(22, 167, 48) 59%);
     overflow-x: auto;
@@ -25,13 +25,13 @@
 
 #Box_Haut {
     display: flex;
-    height: 80px;
-    width: 640px;
+    height: 88px;
+    width: 704px;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(5px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    padding: 22px;
     justify-content: center;
     align-items: center;
 }
@@ -43,20 +43,20 @@
 }
 
 #Titre_Parcours {
-    font-size: 56px;
+    font-size: 61px;
 }
 
 #Zone_IMG_Villages {
     display: flex;
-    gap: 160px;
-    padding-left: 320px;
-    margin-bottom: 40px;
+    gap: 176px;
+    padding-left: 352px;
+    margin-bottom: 44px;
     align-items: flex-start;
 }
 
 .Village_Group {
     position: relative;
-    top: 80px;
+    top: 88px;
     flex-shrink: 0;
 }
 
@@ -69,8 +69,8 @@
 
 .Panneau_Wrapper {
     position: absolute;
-    bottom: -44px;
-    left: -108px;
+    bottom: -48px;
+    left: -118px;
 }
 
 #Wrapper_panneaux1,
@@ -84,7 +84,7 @@
 #IMG_panneaux2,
 #IMG_panneaux3,
 #IMG_panneaux4 {
-    width: 185px;
+    width: 203px;
     display: block;
     transition: transform 0.3s ease;
 }
@@ -99,10 +99,10 @@
     left: 50%;
     transform: translateX(-50%) translateY(6px);
     background: rgba(15, 15, 15, 0.92);
-    border: 1.5px solid rgba(253, 224, 71, 0.55);
-    border-radius: 10px;
-    padding: 10px 14px;
-    width: 230px;
+    border: 1px solid rgba(253, 224, 71, 0.55);
+    border-radius: 11px;
+    padding: 11px 15px;
+    width: 253px;
     color: white;
     font-family: "Quicksand", sans-serif;
     white-space: normal;
@@ -118,27 +118,27 @@
 }
 
 .Tooltip_Titre {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     color: rgba(253, 224, 71, 0.95);
     margin: 0 0 2px 0;
 }
 
 .Tooltip_Lieu {
-    font-size: 10px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.75);
     margin: 0 0 1px 0;
 }
 
 .Tooltip_Date {
-    font-size: 10px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
     font-style: italic;
     margin: 0 0 4px 0;
 }
 
 .Tooltip_Exp {
-    font-size: 10px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.85);
     margin: 4px 0 1px 0;
     font-weight: 600;
@@ -153,19 +153,19 @@
 #Nav_Parcours {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-top: 10px;
+    gap: 13px;
+    margin-top: 11px;
 }
 
 .Nav_Arrow {
     background: rgba(59, 57, 57, 0.712);
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,12 +180,12 @@
 
 #Nav_Dots {
     display: flex;
-    gap: 10px;
+    gap: 11px;
 }
 
 .Nav_Dot {
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
@@ -207,76 +207,76 @@
 
 .IMG_Route {
     position: relative;
-    height: 64px;
+    height: 70px;
     width: 100%;
-    top: 16px;
-    margin-left: -16px;
+    top: 17px;
+    margin-left: -17px;
 }
 
 #IMG_Voiture {
     position: fixed;
-    width: 192px;
-    top: 240px;
+    width: 211px;
+    top: 264px;
 }
 
 #Zone_Buisson {
     display: flex;
     position: relative;
-    top: -16px;
+    top: -17px;
 }
 
 #IMG_Buissons1 {
     position: relative;
-    height: 80px;
+    height: 88px;
     top: -8px;
-    right: 13px;
-    margin-right: 400px;
+    right: 14px;
+    margin-right: 440px;
 }
 
 #IMG_Buissons2 {
     position: relative;
-    height: 64px;
+    height: 70px;
     top: 0px;
-    right: 13px;
-    margin-right: 400px;
+    right: 14px;
+    margin-right: 440px;
 }
 
 #IMG_Buissons3 {
     position: relative;
-    height: 88px;
-    top: -16px;
-    right: 13px;
-    margin-right: 400px;
+    height: 96px;
+    top: -17px;
+    right: 14px;
+    margin-right: 440px;
 }
 
 #IMG_Buissons4 {
     position: relative;
-    height: 76px;
+    height: 83px;
     top: 0px;
-    right: 13px;
-    margin-right: 400px;
+    right: 14px;
+    margin-right: 440px;
 }
 
 #IMG_Buissons5 {
     position: relative;
-    height: 66px;
+    height: 72px;
     top: 0px;
-    right: 13px;
-    margin-right: 400px;
+    right: 14px;
+    margin-right: 440px;
 }
 
 #IMG_Buissons6 {
     position: relative;
-    height: 58px;
+    height: 63px;
     top: 0px;
-    right: 13px;
-    margin-right: 400px;
+    right: 14px;
+    margin-right: 440px;
 }
 
 #IMG_Buissons7 {
     position: relative;
-    height: 51px;
+    height: 56px;
     top: 0px;
-    right: 13px;
+    right: 14px;
 
 }

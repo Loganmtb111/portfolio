@@ -12,7 +12,7 @@ h2 {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .Box_texte {
@@ -66,6 +66,8 @@ p {
     font-size: 14px;
     padding: 13px 25px;
     text-decoration: none;
+    border: none;
+    outline: none;
 }
 
 #Btn_cv:hover {
@@ -98,7 +100,7 @@ p {
 
 li {
     font-family: "Quicksand", sans-serif;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 500;
     color: white;
     text-decoration: none;
@@ -142,4 +144,69 @@ li {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+}
+
+/* ── Modal CV ── */
+
+.CV_Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.CV_Overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.CV_Contenu {
+    position: relative;
+    width: 780px;
+    height: 88vh;
+    background: rgba(32, 30, 30, 0.95);
+    border-radius: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.85);
+}
+
+.CV_iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.CV_Fermer {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 33px;
+    height: 33px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    font-family: "Quicksand", sans-serif;
+}
+
+.CV_Fermer:hover {
+    background: rgba(220, 50, 50, 0.65);
 }

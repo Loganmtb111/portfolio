@@ -6,26 +6,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 22px;
 }
 
 #Scene_E4 {
     display: flex;
     width: 95%;
-    gap: 20px;
+    gap: 22px;
 }
 
 #Content_E4 {
     flex: 1;
     background: rgba(59, 57, 57, 0.712);
-    border-radius: 16px;
+    border-radius: 17px;
     backdrop-filter: blur(5px);
-    border: 2.5px solid rgba(255, 255, 255, 0.089);
-    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.089);
+    padding: 22px;
     max-height: 90vh;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 13px;
 }
 
 #PDF_Header {
@@ -35,7 +35,7 @@
 }
 
 #Titre_E4 {
-    font-size: 28px;
+    font-size: 30px;
     color: white;
     font-family: "Quicksand", sans-serif;
 }
@@ -44,17 +44,17 @@
     width: 100%;
     flex: 1;
     border: none;
-    border-radius: 10px;
+    border-radius: 11px;
     min-height: 70vh;
 }
 
 .tableau-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .tableau-header h1 {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 800;
     color: #000;
     margin-bottom: 5px;
@@ -62,7 +62,7 @@
 }
 
 .tableau-header h2 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: #000;
     text-shadow: none;
@@ -70,7 +70,7 @@
 
 .info-candidat {
     border: 2px solid #000;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 
 .info-row {
@@ -87,31 +87,31 @@
     padding: 8px;
     border-right: 1px solid #000;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     color: #000;
 }
 
 .info-value {
     flex: 3;
     padding: 8px;
-    font-size: 12px;
+    font-size: 13px;
     color: #000;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
 }
 
 .option-choice {
     display: flex;
-    gap: 20px;
+    gap: 22px;
     align-items: center;
 }
 
 .tableau-competences {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 10px;
+    margin-top: 11px;
+    font-size: 11px;
 }
 
 .tableau-competences th,
@@ -133,7 +133,7 @@
     text-orientation: mixed;
     font-size: 8px;
     padding: 4px;
-    min-width: 30px;
+    min-width: 33px;
 }
 
 .realisation-cell {
@@ -149,11 +149,11 @@
     background-color: #d0d0d0 !important;
     font-weight: 700;
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .mark-cell {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
 }
 
@@ -164,12 +164,12 @@
 
 #Content_E4::-webkit-scrollbar-track {
     background: #e0e0e0;
-    border-radius: 10px;
+    border-radius: 11px;
 }
 
 #Content_E4::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 10px;
+    border-radius: 11px;
 }
 
 #Content_E4::-webkit-scrollbar-thumb:hover {
