@@ -49,6 +49,7 @@ const projetsData = {
         image: "../image/img_projet/img_mario.webp",
         description: "L'application Mario Web est développée avec LARAVEL. Elle permet à l'administrateur de gérer les films et les locations via une interface web. Le projet repose sur une architecture MVC et communique avec une API REST pour la gestion des données. Les opérations CRUD (création, lecture, mise à jour, suppression) sont réalisées à travers des requêtes HTTP vers les routes définies pour chaque entité (films, clients, locations, etc.). Cette solution illustre la conception d'une application web professionnelle intégrant la gestion des données et la maintenance évolutive d'un service de location de films.",
         tags: ["Laravel", "PHP", "MySQL"],
+        video: "../video/video_mario.mp4",
         lien: "https://mtb849.sharepoint.com/:w:/r/sites/3-BTSSIOPromo2024-2026/Documents%20partages/Bloc2/Ann%C3%A9e_2/Fiches_projet/LRI/V2/Application_Mario_Web_BTS_SIO_fiche_projet_RFTG_LRI.docx?d=w5e90f9fd7b1c4153ab3b8e57eb950b83&csf=1&web=1&e=aAzLyw",
         competences: ["E2", "E4", "E5"]
     },
@@ -57,6 +58,7 @@ const projetsData = {
         image: "../image/img_projet/img_luigi.webp",
         description: "L'application Luigi Mobile est développée sous Android Studio dans le cadre du BTS SIO. Elle permet aux utilisateurs de réserver et gérer des DVD via une interface mobile intuitive. Le projet repose sur une architecture MVC et communique avec une API REST pour effectuer les opérations CRUD (création, lecture, mise à jour, suppression). Les échanges de données se font par des requêtes HTTP (GET, DELETE) vers des routes définies pour chaque entité : films, clients, locations, etc. Ce projet illustre la mise en œuvre de principes de modularité et de séparation des responsabilités, essentiels au développement d'applications professionnelles.",
         tags: ["Android Studio", "Java", "Mobile"],
+        video: "../video/video_luigi.mp4",
         lien: "https://mtb849.sharepoint.com/:w:/r/sites/3-BTSSIOPromo2024-2026/Documents%20partages/Bloc2/Ann%C3%A9e_2/Fiches_projet/LRI/V2/Application_Luigi_Mobile_BTS_SIO_fiche_projet_RFTG_LRI.docx?d=w832e24c6110d42719e610622a902bd50&csf=1&web=1&e=SffrUa",
         competences: ["E2", "E4", "E5"]
     },
@@ -107,6 +109,21 @@ document.addEventListener("DOMContentLoaded", function () {
             modalCompetences.style.display = "none";
         }
 
+        const existingVideo = document.getElementById("Modal_Video");
+        if (existingVideo) existingVideo.remove();
+        if (data.video) {
+            const video = document.createElement("video");
+            video.id = "Modal_Video";
+            video.className = "Modal_Video";
+            video.controls = true;
+            video.preload = "metadata";
+            const source = document.createElement("source");
+            source.src = data.video;
+            source.type = "video/mp4";
+            video.appendChild(source);
+            document.querySelector(".Modal_Corps").insertAdjacentElement("afterend", video);
+        }
+
         const existing = document.getElementById("Modal_Lien");
         if (existing) existing.remove();
         if (data.lien) {
@@ -123,6 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fermerModal() {
+        const video = document.getElementById("Modal_Video");
+        if (video) video.pause();
         modal.classList.remove("active");
     }
 

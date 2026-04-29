@@ -250,6 +250,13 @@ p {
   flex-shrink: 0;
 }
 
+.Modal_Video {
+  width: 100%;
+  max-height: 320px;
+  background: #000;
+  display: block;
+}
+
 .Modal_Image_Zone::after {
   content: '';
   position: absolute;
