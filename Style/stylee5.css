@@ -1,6 +1,6 @@
-/* Style spécifique pour la page Épreuve E4 */
+/* Style spécifique pour la page Épreuve E5 */
 
-#Container_E4 {
+#Container_E5 {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -9,13 +9,13 @@
     padding: 22px;
 }
 
-#Scene_E4 {
+#Scene_E5 {
     display: flex;
     width: 95%;
     gap: 22px;
 }
 
-#Content_E4 {
+#Content_E5 {
     flex: 1;
     background: rgba(59, 57, 57, 0.712);
     border-radius: 17px;
@@ -34,7 +34,7 @@
     align-items: center;
 }
 
-#Titre_E4 {
+#Titre_E5 {
     font-size: 30px;
     color: white;
     font-family: "Quicksand", sans-serif;
@@ -158,20 +158,20 @@
 }
 
 /* Ajustement de la scrollbar pour le contenu E4 */
-#Content_E4::-webkit-scrollbar {
+#Content_E5::-webkit-scrollbar {
     width: 8px;
 }
 
-#Content_E4::-webkit-scrollbar-track {
+#Content_E5::-webkit-scrollbar-track {
     background: #e0e0e0;
     border-radius: 11px;
 }
 
-#Content_E4::-webkit-scrollbar-thumb {
+#Content_E5::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 11px;
 }
 
-#Content_E4::-webkit-scrollbar-thumb:hover {
+#Content_E5::-webkit-scrollbar-thumb:hover {
     background: #555;
 }

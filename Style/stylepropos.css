@@ -13,6 +13,7 @@ h2 {
 
 p {
     font-size: 14px;
+    line-height: 1.4;
 }
 
 .Box_texte {
@@ -100,11 +101,12 @@ p {
 
 li {
     font-family: "Quicksand", sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     color: white;
     text-decoration: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    list-style-position: inside;
 }
 
 #Box_Competences {

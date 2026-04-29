@@ -91,7 +91,7 @@ a.Menu_Bas {
 #Milieu_Gauche {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 26px;
     align-items: center;
 }
@@ -234,6 +234,7 @@ a.Menu_Bas[data-tooltip]:hover::after {
     border: none;
     font-size: 14px;
     background-color: white;
+    margin-top: 20px;
 }
 
 
