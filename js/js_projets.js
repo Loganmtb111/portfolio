@@ -109,8 +109,9 @@ document.addEventListener("DOMContentLoaded", function () {
             modalCompetences.style.display = "none";
         }
 
-        const existingVideo = document.getElementById("Modal_Video");
-        if (existingVideo) existingVideo.remove();
+        const videoPanel = document.getElementById("Modal_Video_Panel");
+        videoPanel.innerHTML = "";
+        videoPanel.classList.remove("visible");
         if (data.video) {
             const video = document.createElement("video");
             video.id = "Modal_Video";
@@ -121,7 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
             source.src = data.video;
             source.type = "video/mp4";
             video.appendChild(source);
-            document.querySelector(".Modal_Corps").insertAdjacentElement("afterend", video);
+            videoPanel.appendChild(video);
+            videoPanel.classList.add("visible");
         }
 
         const existing = document.getElementById("Modal_Lien");
