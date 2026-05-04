@@ -64,7 +64,10 @@
 #Content_Container {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
 .Tab_Content {
@@ -74,6 +77,13 @@
 
 .Tab_Content.active {
     display: block;
+}
+
+#evolution.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
 }
 
 @keyframes fadeIn {
@@ -303,5 +313,152 @@
 
 li{
     color: white ;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* ── Frise chronologique ── */
+
+.Frise_Titre {
+    margin-bottom: 10px;
+}
+
+.Frise_Outil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.Frise_Outil_Btn {
+    background: rgba(33, 185, 255, 0.2);
+    border: 1px solid rgba(33, 185, 255, 0.5);
+    color: rgba(33, 185, 255, 1);
+    padding: 4px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.Frise_Outil_Btn:hover {
+    background: rgba(33, 185, 255, 0.35);
+    border-color: rgba(33, 185, 255, 0.9);
+}
+
+.Frise_Wrapper {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: 4px;
+    padding-bottom: 24px;
+}
+
+.Frise_Ligne {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(33, 185, 255, 0.45);
+    z-index: 0;
+}
+
+.Frise_Items {
+    display: flex;
+    gap: 12px;
+    position: relative;
+    justify-content: center;
+}
+
+.Frise_Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+    transform-origin: top center;
+}
+
+.Frise_Item:hover {
+    transform: scale(1.1);
+}
+
+.Frise_Point {
+    height: 22px;
+    min-width: 22px;
+    border-radius: 11px;
+    background: rgba(33, 185, 255, 1);
+    border: 3px solid rgba(59, 57, 57, 0.95);
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    transition: min-width 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+}
+
+.Frise_Date {
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    opacity: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease 0.1s, max-width 0.3s ease;
+    font-family: "Quicksand", sans-serif;
+}
+
+.Frise_Item:hover .Frise_Point {
+    min-width: 66px;
+    padding: 0 7px;
+    border-radius: 11px;
+}
+
+.Frise_Item:hover .Frise_Date {
+    opacity: 1;
+    max-width: 80px;
+}
+
+.Frise_Card {
+    width: 100%;
+    min-height: 120px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(33, 185, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.Frise_Item:hover .Frise_Card {
+    background: rgba(33, 185, 255, 0.08);
+    border-color: rgba(33, 185, 255, 0.6);
+}
+
+.Frise_Card_Titre {
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 7px 0;
+    line-height: 1.4;
+    font-family: "Quicksand", sans-serif;
+}
+
+.Frise_Card_Desc {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+    line-height: 1.45;
     font-family: "Quicksand", sans-serif;
 }
